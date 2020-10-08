@@ -1,0 +1,8 @@
+Browsers
+Web Servers
+Devices
+Screen readers
+
+DNS (Domain Name System)
+Internet Service Provider (ISP)
+IP address
