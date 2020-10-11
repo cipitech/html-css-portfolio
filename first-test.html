@@ -1,6 +1,37 @@
+<!DOCTYPE html>
+
 <html>
   <head>
     <title>My First Web Page</title>
+
+    <meta name="description" content="A web page containing examples of html elements" />
+    <meta name="keywords" content="examples, html, portfolio, cipitech" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Altin Cipi" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="Fri, 04 Apr 2021 23:59:59 GMT" />
+
+    <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js">
+    </script>
+
+    <script type="text/javascript">
+      swfobject.embedSWF("/flash/bird.swf","bird", "400", "300", "8.0.0");
+    </script>
+
+    <script type="text/javascript">
+      var flashvars = {};
+      var params = {movie: "../video/puppy.flv"};
+      swfobject.embedSWF("/flash/osplayer.swf", 
+                  "snow", "400", "320", "8.0.0", flashvars, params);
+    </script>
+
+    <script type="text/javascript">
+      var flashvars = {};
+      var params = {mp3: "/audio/test-audio.mp3"};
+      swfobject.embedSWF("/flash/player_mp3_1.0.0.swf", 
+                  "music-player", "200", "20", "8.0.0", flashvars, params);
+    </script>
   </head>
 
   <body>
@@ -311,5 +342,339 @@
       <br />
       <figcaption>Sea otters hold hands when they sleep so they don't drift away from each other.</figcaption>
     </figure>
+
+    <!-- TABLES -->
+
+    <!-- Simple table --> <hr />
+    <table>
+      <tr>
+        <td>15</td>
+        <td>15</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td>60</td>
+        <td>45</td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td>90</td>
+        <td>90</td>
+      </tr>
+    </table>
+
+    <!-- Table with headings --> <hr />
+    <table>
+      <tr>
+        <th></th>
+        <th scope="col">Saturday</th>
+        <th scope="col">Sunday</th>
+      </tr>
+      <tr>
+        <th scope="row">Tickets sold:</th>
+        <td>120</td>
+        <td>135</td>
+      </tr>
+      <tr>
+        <th scope="row">Total sales:</th>
+        <td>$600</td>
+        <td>$675</td>
+      </tr>
+    </table>
+
+    <!-- Spanning columns --> <hr />
+    <table>
+      <tr>
+        <th></th>
+        <th>9am</th>
+        <th>10am</th>
+        <th>11am</th>
+        <th>12am</th>
+      </tr>
+      <tr>
+        <th>Monday</th>
+        <td colspan="2">Geography</td>
+        <td>Math</td>
+        <td>Art</td>
+      </tr>
+      <tr>
+        <th>Tuesday</th>
+        <td colspan="3">Gym</td>
+        <td>Home Ec</td>
+      </tr>
+    </table>
+
+    <!-- Spanning rows --> <hr />
+    <table>
+      <tr>
+        <th></th>
+        <th>ABC</th>
+        <th>BBC</th>
+        <th>CNN</th>
+      </tr>
+      <tr>
+        <th>6pm - 7pm</th>
+        <td rowspan="2">Movie</td>
+        <td>Comedy</td>
+        <td>News</td>
+      </tr>
+      <tr>
+        <th>7pm - 8pm</th>
+        <td>Sport</td>
+        <td>Current Affairs</td>
+      </tr>
+    </table>
+
+    <!-- Table with header and footer --> <hr />
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Income</th>
+          <th>Expenditure</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1st January</th>
+          <td>250</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <th>2nd January</th>
+          <td>285</td>
+          <td>48</td>
+        </tr>
+      <!-- additional rows as above -->
+        <tr>
+          <th>31st January</th>
+          <td>129</td>
+          <td>64</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td>7824</td>
+          <td>1241</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Customizing appearance of a table --> <hr />
+    <table width="400" cellpadding="10" cellspacing="5" border="2" bgcolor="#efefef">
+      <tr>
+        <th width="150"></th>
+        <th>Withdrawn</th>
+        <th>Credit</th>
+        <th width="150" bgcolor="#cccccc">Balance</th>
+      </tr>
+      <tr>
+        <th>January</th>
+        <td>250.00</td>
+        <td>660.50</td>
+        <td bgcolor="#cccccc">410.50</td>
+      </tr>
+      <tr>
+        <th>February</th>
+        <td>135.55</td>
+        <td>895.20</td>
+        <td bgcolor="#cccccc">1170.15</td>
+      </tr>
+    </table>
+
+    <!-- FORMS -->
+    <form action="http://www.example.com/subscribe.php" method="get" id="example">
+    
+      <!-- Simple Text --> <hr />
+      <p>Username:
+        <input type="text" name="username" size="15" maxlength="30" />
+      </p>
+
+      <!-- Password -->
+      <p>Password:
+        <input type="password" name="password" size="15" maxlength="30" />
+      </p>
+
+      <!-- Text area --> <hr />
+      <p>What did you think of this gig?</p>
+      <textarea name="comments" cols="20" rows="4">Enter your comments...</textarea>
+
+      <!-- Radio Button --> <hr />
+      <p>Please select your favorite genre:
+        <br />
+        <input type="radio" name="genre" value="rock" checked="checked" /> Rock
+        <input type="radio" name="genre" value="pop" /> Pop
+        <input type="radio" name="genre" value="jazz" /> Jazz
+      </p>
+
+      <!-- Checkbox --> <hr />
+      <p>Please select your favorite music service(s):
+        <br />
+        <input type="checkbox" name="service" value="itunes" checked="checked" /> iTunes
+        <input type="checkbox" name="service" value="lastfm" /> Last.fm
+        <input type="checkbox" name="service" value="spotify" /> Spotify
+      </p>
+
+      <!-- Dropdown List --> <hr />
+      <p>What device do you listen to music on?</p>
+      <select name="devices">
+        <option value="ipod">iPod</option>
+        <option value="radio">Radio</option>
+        <option value="computer">Computer</option>
+      </select>
+
+      <!-- Dropdown List MultiSelect --> <hr />
+      <p>Do you play any of the following instruments?
+        (You can select more than one option by holding
+        down control on a PC or command key on a Mac
+        while selecting different options.)</p>
+      <select name="instruments" size="3" multiple="multiple">
+        <option value="guitar" selected="selected">Guitar</option>
+        <option value="drums">Drums</option>
+        <option value="keyboard" selected="selected">Keyboard</option>
+        <option value="bass">Bass</option>
+      </select>
+
+      <!-- File Input --> <hr />
+      <p>Upload your song in MP3 format:</p>
+      <input type="file" name="user-song" /><br />
+      <!-- Submit Button -->
+      <input type="submit" name="upload" value="Upload" />
+
+      <!-- Image Submit Button --> <hr />
+      <p>Subscribe to our email list:</p>
+      <input type="text" name="email" />
+      <input type="image" src="images/buttons/subscribe.jpg" width="100" height="20" />
+
+      <!-- Custom Buttons --> <hr />
+      <button>
+        <img src="images/buttons/add.gif" alt="add" width="10" height="10" /> 
+        Add
+      </button>
+      <!-- Hidden Controls -->
+      <input type="hidden" name="bookmark" value="lyrics" />
+
+      <!-- Labels --> <hr />
+      <label>Age: <input type="text" name="age" /></label>
+      <br />
+      Gender:
+      <input id="female" type="radio" name="gender" value="f">
+      <label for="female">Female</label>
+      <input id="male" type="radio" name="gender" value="m">
+      <label for="male">Male</label>
+
+      <!-- Grouped Form Elements --> <hr />
+      <fieldset>
+        <legend>Contact details</legend>
+        <label>Email:<br /><input type="text" name="email" /></label>
+        <br />
+        <label>Mobile:<br /><input type="text" name="mobile" /></label>
+        <br />
+        <label>Telephone:<br /><input type="text" name="telephone" /></label>
+      </fieldset>
+
+      <!-- Form Validation --> <hr />
+      <label for="username">Username:</label>
+      <input id="username" type="text" name="username" required="required" />
+      <br />
+      <label for="password">Password:</label>
+      <input id="password" type="password" name="password" required="required" />
+      <input type="submit" value="Submit" />
+
+      <!-- Dates --> <hr />
+      <label for="date">Departure date:</label>
+      <input id="date" type="date" name="depart" />
+
+      <!-- Emails --> <hr />
+      <p>Please enter your email address:</p>
+      <input type="email" name="email" />
+
+      <!-- URLs --> <hr />
+      <p>Please enter your website address:</p>
+      <input type="url" name="website" />
+
+      <!-- Search Input --> <hr />
+      <p>Search:</p>
+      <input type="search" name="search" placeholder="Enter keyword" />
+    </form>
+
+    <!-- Grouping Elements --> 
+    
+    <!-- Block level / div --> <hr />
+    <div id="header">
+      <img src="images/logos/logo.gif" alt="Anish Kapoor" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biography.html">Biography</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div><!-- end of header -->
+
+    <!-- Inline / span --> <hr />
+    <p>Anish Kapoor won the Turner Prize in 1991 and
+      exhibited at the <span class="gallery">Tate
+      Modern</span> gallery in London in 2003.</p>
+
+    <!-- I-frames --> <hr />
+    <iframe width="450" height="350" 
+      src="http://maps.google.co.uk/maps?q=moma+new+york&amp;output=embed"
+      scrolling="no"
+      frameborder="0"
+      seamless="seamless">
+    </iframe>
+
+    <!-- Special Characters --> <hr />
+    <p>
+      &lt; <br />
+      &gt; <br />
+      &amp; <br />
+      &quot; <br />
+      &cent; <br />
+      &pound; <br />
+      &yen; <br />
+      &euro; <br />
+      &copy; <br />
+      &reg; <br />
+      &trade; <br />
+      &lsquo; <br />
+      &rsquo; <br />
+      &ldquo; <br />
+      &rdquo; <br />
+      &times; <br />
+      &divide; <br />
+    </p>
+
+    <!-- Video & Audio -->
+
+    <!-- Flash Video --> <hr />
+    <div id="bird"><p>An animation of a bird taking a shower</p></div>
+
+    <div id="snow"><p>A video of a puppy playing in the snow</p></div>
+
+    <!-- HTML5 Video --> <hr />
+    <video poster="images/puppy.jpg"
+        width="400" height="300"
+        preload controls loop>
+      <source src="video/puppy.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+      <source src="video/puppy.webm" type='video/webm;codecs="vp8, vorbis"' />
+      <p>A video of a puppy playing in the snow</p>
+    </video>
+
+    <!-- Flash Audio --> <hr />
+    <div id="music-player">
+      <p>You cannot hear this track because this
+      browser does not support our Flash music
+      player.</p>
+    </div>
+
+    <!-- HTML5 Audio --> <hr />
+    <audio controls autoplay>
+      <source src="audio/test-audio.ogg" />
+      <source src="audio/test-audio.mp3" />
+      <p>This browser does not support our audio format.</p>
+    </audio>
   </body>
 </html>

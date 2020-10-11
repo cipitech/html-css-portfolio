@@ -25,3 +25,8 @@
 - Photoshop
 - How to make GIFs
 - How to make SVGs
+- SSL (Secure Sockets Layer)
+- XML
+- SVG
+- CML
+- MathML
