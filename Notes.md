@@ -1,5 +1,10 @@
 ## LEARNED
 
+- HTML
+- CSS
+- JAVASCRIPT
+
+##
 - Browsers
 - Web Servers
 - Devices
@@ -12,7 +17,11 @@
 
 ##
 - Uniform Resource Locator (URL)
+- Scalable Vector Graphics (SVG)
 
 
 ## TO LEARN
 - hCards
+- Photoshop
+- How to make GIFs
+- How to make SVGs
